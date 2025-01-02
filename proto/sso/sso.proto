@@ -26,7 +26,10 @@ message LoginRequest {
 }
 
 message LoginResponse {
-  string token = 1;
+  string token = 1;            // Access token
+  string refresh_token = 2;    // Refresh token
+  int64 exp_access = 3;        // UNIX timestamp времени истечения access token
+  int64 exp_refresh = 4;       // UNIX timestamp времени истечения refresh token
 }
 
 message IsAdminRequest {
