@@ -35,6 +35,7 @@ message LoginResponse {
 
 message RefreshTokenRequest {
   string refresh_token = 1;
+  int32 app_id = 2;
 }
 
 message RefreshTokenResponse {
